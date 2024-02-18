@@ -46,6 +46,7 @@ export default function App() {
     } else {
       setTenzies(false);
       setDice(allNewDice());
+      numOfRolls = 0;
     }
   }
 
@@ -68,14 +69,20 @@ export default function App() {
 
   return (
     <>
-      {tenzies && <p>You Rolled {numOfRolls} Times to win!</p>}
       <main>
         {tenzies && <Confetti />}
-        <h1 className="title">Tenzies</h1>
-        <p className="instructions">
-          Roll until all dice are the same. Click each die <br />
-          to freeze it at its current value between rolls.
-        </p>
+        {tenzies ? (
+          <p className="winMsg">You Rolled {numOfRolls} Times to win!</p>
+        ) : (
+          <>
+            <h1 className="title">Tenzies</h1>
+            <p className="instructions">
+              Roll until all dice are the same. Click each die <br />
+              to freeze it at its current value between rolls.
+            </p>
+          </>
+        )}
+
         <div className="dice-container">{diceElements}</div>
         <button className="roll-dice" onClick={rollDice}>
           {tenzies ? "New Game" : "Roll"}

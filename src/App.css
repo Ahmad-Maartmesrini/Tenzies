@@ -13,12 +13,23 @@ body {
   place-items: center;
 }
 
+.winMsg {
+  background: hsl(248, 100%, 60%);
+  color: #fff;
+  text-align: center;
+  font-family: "inter", sans-serif;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  padding: 10px 45px;
+  margin: 0;
+}
+
 main {
   background: hsla(0, 0%, 96%, 1);
-  height: 400px;
+  height: auto;
   max-width: 800px;
   border-radius: 10px;
-  padding: 35px;
+  padding: 40px 35px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,6 +44,8 @@ main {
   line-height: 30px;
   letter-spacing: -0.03em;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 5;
 }
 
 .instructions {
@@ -41,7 +54,7 @@ main {
   line-height: 16px;
   letter-spacing: -0.03em;
   font-weight: 400;
-  margin-top: 0;
+  margin: 0;
   text-align: center;
   color: hsla(234, 22%, 37%, 1);
 }
@@ -50,7 +63,7 @@ main {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
   gap: 20px;
-  margin-bottom: 40px;
+  margin: 35px 0px;
 }
 
 .die-face {
