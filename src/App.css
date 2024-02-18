@@ -104,6 +104,10 @@ main {
 @media (max-width: 400px) {
   body {
     padding: 0;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   main {
